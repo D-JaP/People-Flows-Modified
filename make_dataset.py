@@ -27,7 +27,7 @@ for img_path in img_paths:
     with open (gt_path,'r') as f:
         gt = json.load(f)
 
-    anno_list = gt.values()[0]['regions']
+    anno_list = list(gt.values())[0]['regions']
     img= plt.imread(img_path)
     k = np.zeros((360,640))
     rate_h = img.shape[0]/360.0
