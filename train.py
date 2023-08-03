@@ -48,7 +48,7 @@ def main():
 
     model = model.cuda()
 
-    criterion = nn.MSELoss(size_average=False).cuda()
+    criterion = nn.MSELoss(reduction='sum').cuda()
 
     optimizer = torch.optim.Adam(model.parameters(), args.lr,
                                 weight_decay=args.decay)
