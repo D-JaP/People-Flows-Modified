@@ -9,7 +9,7 @@ import json
 from image import *
 
 #set the root to the path of FDST dataset you download
-root = ''
+root = '/content/data'
 
 #now generate the FDST's ground truth
 train_folder = os.path.join(root,'train_data')
