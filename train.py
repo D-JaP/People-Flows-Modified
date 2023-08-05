@@ -1,5 +1,6 @@
 import os
 from model import CANNet2s
+from MobileCount import MobileCount
 from utils import save_checkpoint
 
 import torch
@@ -44,7 +45,8 @@ def main():
 
     torch.cuda.manual_seed(args.seed)
 
-    model = CANNet2s()
+    # model = CANNet2s()
+    model = MobileCount()
 
     model = model.cuda()
 
