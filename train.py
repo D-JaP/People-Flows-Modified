@@ -37,7 +37,7 @@ def main():
     args.epochs = 200
     args.workers = 4
     args.seed = int(time.time())
-    args.print_freq = 1000
+    args.print_freq = 10
     with open(args.train_json, 'r') as outfile:
         train_list = json.load(outfile)
     with open(args.val_json, 'r') as outfile:
@@ -69,6 +69,7 @@ def main():
         }, is_best)
 
 def train(train_list, model, criterion, optimizer, epoch):
+    torch.cuda.empty_cache()
 
     losses = AverageMeter()
     batch_time = AverageMeter()

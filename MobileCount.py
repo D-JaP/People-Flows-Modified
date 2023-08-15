@@ -263,6 +263,6 @@ class MobileCount(nn.Module):
         x1 = self.dropout_clf(x1)
         out = self.clf_conv(x1) # 10 channel output
 
-        out = F.upsample(out, size=(360,640), mode='bilinear')
+        out = F.upsample(out, size=size1, mode='bilinear')
         out = F.relu(out)
         return out

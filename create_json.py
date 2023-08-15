@@ -6,9 +6,9 @@ import random
 
 if __name__ == '__main__':
     # root is the path to your code, which is current directory
-    root = '/content/People-Flows-Modified'
+    root = '../People-Flows-Modified'
     # root_data is where you download the FDST dataset
-    root_data = '/content/data'
+    root_data = '../data'
     train_folders = join(root_data,'train_data')
     test_folders = join(root_data,'test_data')
     output_train_all = join(root,'train_all.json')
